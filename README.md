@@ -4,20 +4,28 @@ Welcome commit of car showcase application
 ## Getting Started
 
 ### Future Helps 
-
+- Custom button component ([commit 6958f82](https://github.com/Fardeen-Awais/Project-02-Spotify/commit/6958f82))
+- Hero section ([commit c360c04](https://github.com/Fardeen-Awais/Project-02-Spotify/commit/c360c04))
 
 ### Built With
+
     Next.js - Full stack development framework 
 
 ### Commit details
 
-In this commit the reusable button is created in a clean code manner.
+In this commit we use layout.tsx to have an navbar.tsx and footer.tsx in the pages.
 
-The following good practices we done here: 
+In Navbar.tsx: 
+We make an proper sticky navbar that help user to navigate without going to the up.
 
-    1. We have an seperate client side and server side components.
-    2. We export our all type with only one index.ts folder.
-    3. We make components and exports it within a single find called index.ts in componets folder. 
+    Here is some new things i learn:
+    1. glassmorphism effect in navbar.
+    2. Sticky navbar. 
+    3. Use backdrop blur is awesome
+
+In Footer.tsx:
+We make an well organized footer for our app. We use constant so we can add more section as we wanted. We use map function to use the items of constants.
+
 
 ### Authors
 - Fardeen Founder of Alfarnex
