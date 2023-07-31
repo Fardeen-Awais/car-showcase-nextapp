@@ -11,32 +11,30 @@ Welcome commit of car showcase application
 ### Built With
 
     Next.js - Full stack development framework 
+    Headless UI - UserInterface library help to make ui
 
 ### Commit details
 
-In this commit we use layout.tsx to have an navbar.tsx and footer.tsx in the pages.
+In searchbar.tsx : 
 
-In Navbar.tsx: 
-We make an proper sticky navbar that help user to navigate without going to the up.
+It uses the useState hook to create a state variable manufacturer and a setter function setManufacturer. It also defines a function called handleSearch.
 
-    Here is some new things i learn:
-    1. glassmorphism effect in navbar.
-    2. Sticky navbar. 
-    3. Use backdrop blur is awesome
+The component returns a form with a class name of "searchbar" and an onSubmit event handler that calls the handleSearch function. Inside the form, there is a div with a class name of "searchbar__item" that contains another component called SearchManufacturer, which receives the manufacturer state variable and the setManufacturer setter function as props.
 
-In Footer.tsx:
-We make an well organized footer for our app. We use constant so we can add more section as we wanted. We use map function to use the items of constants.
+In SearchManufacturer.tsx :
 
-In SearchBar.tsx: 
-In this component, we make searchbar with headless ui. Let's discussed about this component
-first. 
+This code defines a component called SearchManufacturer. It receives two props: manufacturer and setManuFacturer. It uses the useState hook to create a state variable called query and a setter function called SetQuery.
 
-This code snippet defines a functional component called SearchBar in TypeScript. It uses the useState hook to create a state variable called manufacturer and a setter function called setManufacturer. The handleSearch function is defined but empty.
+Inside the component, there is a piece of code that filters a list of car manufacturers based on the value of the query state variable. If query is empty, it shows all manufacturers, otherwise it filters the list based on a case-insensitive match with the query.
 
-The component returns a form with a class name of "searchbar" and an onSubmit event handler set to handleSearch. Inside the form, there is a SearchManufacturer component that takes in the manufacturer state variable and the setManufacturer setter function as props.
+The component returns a search input field with a dropdown menu that shows the filtered manufacturers. When the user types in the search input, it updates the query state variable. The dropdown menu transitions between showing and hiding based on the presence of filtered manufacturers.
 
-    We use some of the states empty so we can fill these states later to 
-    enhanced the filteration feature
+When the user selects a manufacturer from the dropdown menu, it updates the manufacturer prop using the setManuFacturer function. The selected manufacturer is displayed in the search input field.
+
+Overall, this component provides a search functionality for finding car manufacturers.
+
+
+
 ### Authors
 - Fardeen Founder of Alfarnex
 
