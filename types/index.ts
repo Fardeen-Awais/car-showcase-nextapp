@@ -1,6 +1,13 @@
+import { MouseEventHandler } from "react";
+
 export interface ButtonProps {
-  title: string;
+  isDisabled?: boolean;
+  btnType?: "button" | "submit";
   containerStyles?: string;
+  textStyles?: string;
+  title: string;
+  rightIcon?: string;
+  handleClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 export interface CustomFilterProps {
@@ -25,4 +32,10 @@ export interface CarProps {
   model: string
   transmission: string
   year: number
+}
+
+export interface CarDetailsProps {
+  isOpen: boolean 
+  closeModal:()=> void
+  car:CarProps;
 }
